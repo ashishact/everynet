@@ -1,0 +1,40 @@
+{
+  "global": {},
+  "plugins": {
+    "system": {},
+    "meminfo": {},
+    "loadavg": {},
+    "filesystem": {
+      "exclude": "^/(sys|proc|dev|run)"
+    },
+    "netdev": {
+      "exclude": "lo"
+    },
+    "netdevexists": {
+      "interfaces": [
+        "eth",
+        "ppp",
+        "tun"
+      ]
+    },
+    "mcu": {
+      "interval": 20,
+      "serial": {
+        "port": "/dev/ttyAPP2",
+        "baudrate": 9600,
+        "timeout": 2
+      }
+    },
+    "lmsensors": {},
+    "ping": {
+      "targets": [
+        {
+          "address": "lora.srv.priv",
+          "timeout": 1,
+          "interval": 10
+        }
+      ]
+    },
+    "imx28": {}
+  }
+}

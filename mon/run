@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export SENSORS_LIB=libsensors.so
+export STDC_LIB=libstdc++.so.6
+
+exec python main.py
